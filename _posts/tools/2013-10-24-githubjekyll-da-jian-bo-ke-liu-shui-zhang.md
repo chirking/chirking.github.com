@@ -107,16 +107,12 @@ index.md:主页
 self.content = File.read(File.join(base, name), :encoding => "utf-8")  
 ```
 
-2.Jekyll默认的markdown解析器maruku对中文支持不够完善，换成RDiscount解析器  
-
-```
-gem install rdiscount  
-```
+2.Jekyll默认的markdown解析器maruku对中文支持不够完善，换成redcarpet解析器，redcarpet是github内部默认的markdown解析器，其他比如rdiscount可以会出现本地生成和github上生成不一致的问题。  
 
 在_config.yml文件中，添加一行：  
 
 ```
-markdown: rdiscount  
+markdown: redcarpet  
 ```
 
 3.rake脚本不支持中文，修改Rakefile文件  
