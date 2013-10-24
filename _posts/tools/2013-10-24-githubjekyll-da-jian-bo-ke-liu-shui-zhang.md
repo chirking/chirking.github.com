@@ -27,7 +27,7 @@ jekyll-bootstrap简化了jekyll搭建Blog的过程，[jekyll-bootstrap官网](ht
 
 Jekyll是ruby实现的，先要安装ruby，然后安装jekyll。  
 ```
-gem install jekyll
+gem install jekyll  
 ```
 
 # 创建github repository
@@ -35,10 +35,10 @@ gem install jekyll
 
 # 初始化jekyll到github
 ```
-git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
-cd USERNAME.github.com
-git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
-git push origin master
+git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com  
+cd USERNAME.github.com  
+git remote set-url origin git@github.com:USERNAME/  USERNAME.github.com.git  
+git push origin master  
 ```
 大概过10分钟，你就可以通过 USERNAME.github.com 看到你的博客了。
 
@@ -55,7 +55,7 @@ jekyll serve
 # 写文章
 
 ```
-rake post title="Hello World"  
+rake post title="Hello World"    
 ```  
 
 命令在_post文件夹下创建了一个.md文件，可以用本地的markdown编辑器来写博客了。
@@ -76,13 +76,13 @@ jekyllbootstrap提供的主题[http://themes.jekyllbootstrap.com/](http://themes
 当然，还可以去网上找其他人的主题  
 
 ```
-rake theme:install git="https://github.com/jekyllbootstrap/theme-the-program.git"
+rake theme:install git="https://github.com/jekyllbootstrap/theme-the-program.git"  
 ```
 
 也可以随时切换  
 
 ```
-rake theme:switch name="the-program"
+rake theme:switch name="the-program"  
 ```
 
 # jekyll目录结构
@@ -104,19 +104,19 @@ index.md:主页
 
 
 ```
-self.content = File.read(File.join(base, name), :encoding => "utf-8")
+self.content = File.read(File.join(base, name), :encoding => "utf-8")  
 ```
 
 2.Jekyll默认的markdown解析器maruku对中文支持不够完善，换成RDiscount解析器
 
 ```
-gem install rdiscount
+gem install rdiscount  
 ```
 
 在_config.yml文件中，添加一行：
 
 ```
-markdown: rdiscount
+markdown: rdiscount  
 ```
 
 3.rake脚本不支持中文，修改Rakefile文件
@@ -169,7 +169,7 @@ end # task :post
 这里把中文和分类都支持了，可以这样创建文章：
 
 ```
-post title="中文文子" category="中文" date="2013-01-01" tags="中国 文字" description="聊聊中文文字"
+post title="中文文子" category="中文" date="2013-01-01" tags="中国 文字" description="聊聊中文文字"  
 ```
 
 # 首页摘要
