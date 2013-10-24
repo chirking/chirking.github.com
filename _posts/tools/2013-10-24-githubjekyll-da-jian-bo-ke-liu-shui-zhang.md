@@ -121,7 +121,7 @@ markdown: rdiscount
 
 3.rake脚本不支持中文，修改Rakefile文件
 
-```
+```  
 desc "Begin a new post in #{CONFIG['posts']}"  
 task :post do  
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])  
@@ -151,7 +151,6 @@ task :post do
   # 新增用户提示，在创建博客之前最后再检查一次是否按照自己的需求正确创建  
   # User confirm   
   # abort("rake aborted!") if ask("The post #{filename} will be created in category #{category}, are you sure?", ['y', 'n']) == 'n'  
-  
   puts "Creating new post: #{filename}"  
   open(filename, 'w') do |post|  
     post.puts "---"  
@@ -163,8 +162,8 @@ task :post do
     post.puts "---"  
     post.puts "{% include JB/setup %}"  
   end  
-end # task :post  
-```  
+end # task :post
+```   
 
 这里把中文和分类都支持了，可以这样创建文章：
 
