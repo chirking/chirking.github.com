@@ -13,7 +13,7 @@ github pages是github提供的免费动态页面托管服务，我们可以通�
 
 # Jekyll
 
-Jekyll是一个静态站点生成器，通过jekyll生成静态站点后，就可以提交到github，通过github pages生成博客了。
+Jekyll是一个静态站点生成器，通过jekyll生成静态站点后，就可以提交到github，通过github pages生成博客。
 
 Jekyll支持markdown生成html，所以我们可以用markdown来写博客了。
 
@@ -40,7 +40,7 @@ cd USERNAME.github.com
 git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
 git push origin master
 ```
-大概过10分钟，你就可以通过 USERNAME.github.com.git 看到你的博客了。
+大概过10分钟，你就可以通过 USERNAME.github.com 看到你的博客了。
 
 # 本地启动
 
@@ -67,6 +67,8 @@ git add .
 git commit -m "Add new content"  
 git push origin master  
 ```
+
+<!--more-->
 
 # jekyll主题
 
@@ -170,4 +172,14 @@ end # task :post
 post title="中文文子" category="中文" date="2013-01-01" tags="中国 文字" description="聊聊中文文字"
 ```
 
-# 坚持写下去
+# 首页摘要
+
+由于首页要显示多篇文章，如果文章很长，浏览起来会很麻烦。所以首页只显示摘要。摘要可以用字数来控制，但是我希望能更好的控制。  
+所以我通过在文章里加html标记来控制摘要。在文章里加上`<!--more-->`标记，标记之前的就是摘要了。
+获取摘要：
+
+```
+{ { post.content | split:'<!--more-->' | first } } 
+```
+
+# 最后，坚持写下去
