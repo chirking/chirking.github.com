@@ -100,26 +100,26 @@ index.md:主页
 
 # 中文支持
 
-1.ruby目录下修改gems/jekyll-0.11.0/lib/jekyll/convertible.rb
+1.ruby目录下修改gems/jekyll-0.11.0/lib/jekyll/convertible.rb  
 
 
 ```
 self.content = File.read(File.join(base, name), :encoding => "utf-8")  
 ```
 
-2.Jekyll默认的markdown解析器maruku对中文支持不够完善，换成RDiscount解析器
+2.Jekyll默认的markdown解析器maruku对中文支持不够完善，换成RDiscount解析器  
 
 ```
 gem install rdiscount  
 ```
 
-在_config.yml文件中，添加一行：
+在_config.yml文件中，添加一行：  
 
 ```
 markdown: rdiscount  
 ```
 
-3.rake脚本不支持中文，修改Rakefile文件
+3.rake脚本不支持中文，修改Rakefile文件  
 
 ```  
 desc "Begin a new post in #{CONFIG['posts']}"  
@@ -165,7 +165,7 @@ task :post do
 end # task :post
 ```   
 
-这里把中文和分类都支持了，可以这样创建文章：
+这里把中文和分类都支持了，可以这样创建文章：  
 
 ```
 post title="中文文子" category="中文" date="2013-01-01" tags="中国 文字" description="聊聊中文文字"  
@@ -175,7 +175,7 @@ post title="中文文子" category="中文" date="2013-01-01" tags="中国 文�
 
 由于首页要显示多篇文章，如果文章很长，浏览起来会很麻烦。所以首页只显示摘要。摘要可以用字数来控制，但是我希望能更好的控制。  
 所以我通过在文章里加html标记来控制摘要。在文章里加上`<!--more-->`标记，标记之前的就是摘要了。
-获取摘要：
+获取摘要：  
 
 ```
 { { post.content | split:'<!--more-->' | first } } 
