@@ -7,7 +7,7 @@ layout:   default
     {% include post_excerpt.html %}    
   {% endfor %}
   <p>
-    For older posts, have a look in the <a href="/notebook.html">notebook</a>.
+    <a href="/notebook.html">查看更多文章.</a>
   </p>
 </div>
 
