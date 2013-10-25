@@ -3,6 +3,12 @@ layout:   default
 title:    Notebook 
 ---
 
+<div class="span-12 last">
+  <p class="first">
+    文章分类
+  </p>
+</div>
+
 <div class="span-3">
   <nav id="post-archive-category-list">
     <ul>

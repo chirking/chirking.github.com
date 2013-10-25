@@ -8,7 +8,7 @@
         {{ site.description }}
       </p>
 	    <h1>
-				<a id="logo" class="image-wrapper" href="/"  title="dlimiter">
+				<a id="logo" class="image-wrapper" href="/"  title="">
 				</a>
       </h1>
     </div>
@@ -23,3 +23,10 @@
     </nav>
   </div>
 </header>
+
+<script type="text/javascript">
+  // var jq = jQuery.noConflict();
+  $("#name-title .first").click(function(){
+    $("#logo").get(0).click()
+  });
+</script>
