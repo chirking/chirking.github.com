@@ -7,7 +7,8 @@ layout: default
   <article class="post">
     <p class="first">{{ page.title }}</p>
     <div class="post byline">
-         {{ page.date | date: "%d %b, %Y" }} on {% for category in page.categories %}{% if category == page.categories.last and category != page.categories.first %} and {% elsif category != page.categories.first %}, {% endif %}<a href="/notebook.html?cat=cat-{{ category | replace:' ','-' }}">{{ category }}</a>{% endfor %}
+         {{ page.date | date: "%d %b, %Y" }} 分类: {% for category in page.categories %}{% if category == page.categories.last and category != page.categories.first %} and {% elsif category != page.categories.first %}, {% endif %}<a href="/notebook.html?cat=cat-{{ category | replace:' ','-' }}">{{ category }}</a>{% endfor %}
+         标签: {% for tag in page.tags %}<a href="">{{ tag }} </a>{% endfor %}
     </div>
     <div class="post content">
       {{ content }}    
