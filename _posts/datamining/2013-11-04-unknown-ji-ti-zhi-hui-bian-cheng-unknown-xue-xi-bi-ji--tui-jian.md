@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "《集体智慧编程》学习笔记：推荐"
+title: "《集体智慧编程》学习笔记：推荐算法"
 description: ""
 category: "datamining"
 tags: datamining 学习笔记
