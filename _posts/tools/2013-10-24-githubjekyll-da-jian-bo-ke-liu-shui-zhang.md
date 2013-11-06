@@ -177,4 +177,16 @@ post title="中文文子" category="中文" date="2013-01-01" tags="中国 文�
 { { post.content | split:'<!--more-->' | first } } 
 ```
 
-# 最后，坚持写下去
+# 绑定域名
+
+在项目根目录下新建一个名为```CNAME```的文件，文件内容形如：  
+```
+example.com
+```  
+也支持二级域名，如：  
+```
+blog.example.com
+```  
+然后将域名解析到```204.232.175.78```。（这个IP会有变动，在 [这里](https://help.github.com/articles/my-custom-domain-isn-t-working) 查看）
+
+# 最后，坚持写下去!
