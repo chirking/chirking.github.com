@@ -6,7 +6,7 @@ category: "datamining"
 tags: datamining 学习笔记
 ---
 {% include JB/setup %}
-
+  
 # 随机优化
 
 有一类问题，受多个变量影响，存在多个可能的解。随机优化的作用就是尽量找到最佳的变量组合以达到最佳的结果。  
